@@ -6,22 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <fragment
-        android:id="@+id/mailList"
-        android:name="com.example.labfragments.MailListFragment"
+        android:id="@+id/navHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        app:navGraph="@navigation/main_nav"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        tools:ignore="FragmentTagUsage" />
 
-    </fragment>
-
-
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mailDetail"
-        android:name="com.example.labfragments.MailDetailFragment">
-
-    </fragment>
 </androidx.constraintlayout.widget.ConstraintLayout>
